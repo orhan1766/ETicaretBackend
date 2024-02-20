@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Context\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Customer\" />
+    <None Remove="Repositories\Order\" />
+    <None Remove="Repositories\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Customer\" />
+    <Folder Include="Repositories\Order\" />
+    <Folder Include="Repositories\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  </ItemGroup>
+</Project>
